@@ -15,7 +15,7 @@ class TestCommitCounter(unittest.TestCase):
     def test_Repo1(self, mock_repoNames):
         mock_repoNames.return_value.names = ['SSW-567', 'SSW-567-WS', 'helloworld']
         response = RepoLister.getRepoNames('indhunaidu')
-        self.assertIn('ssw-567-H04', response.names)
+        self.assertIn('SSW-567-WS', response.names)
     @mock.patch("RepoLister.countCommits")
     def test_SSW567(self, mock_countCommits):
         mock_countCommits.return_value.commits = 11
